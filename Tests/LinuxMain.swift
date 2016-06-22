@@ -11,4 +11,5 @@ XCTMain([
 	testCase(RedBlackTreeDeletionTests.allTests),
 	testCase(RedBlackTreeNodeTests.allTests),
 	testCase(RedBlackTreeNodeRotationTests.allTests),
+	testCase(RedBlackTreeCollectionTests.allTests),
 ])
