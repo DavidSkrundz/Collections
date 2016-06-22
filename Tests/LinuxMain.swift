@@ -3,7 +3,7 @@
 //  Collections
 //
 
-@testable import CollectionsTestSuite
+@testable import RedBlackTree
 import XCTest
 
 XCTMain([
