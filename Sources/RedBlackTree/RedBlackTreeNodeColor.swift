@@ -3,17 +3,16 @@
 //  Collections
 //
 
-/// Possible colors for nodes
 internal enum RedBlackTreeNodeColor {
-	case Red
-	case Black
+	case red
+	case black
 }
 
 extension RedBlackTreeNodeColor: CustomStringConvertible {
 	internal var description: String {
 		switch self {
-			case .Red:   return "Red"
-			case .Black: return "Black"
+			case .red:   return "Red"
+			case .black: return "Black"
 		}
 	}
 }

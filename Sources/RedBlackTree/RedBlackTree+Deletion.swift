@@ -12,9 +12,9 @@ extension RedBlackTree {
 		
 		if let nodeToDelete = root.delete(key) {
 			let child = nodeToDelete.leftChild != nil ? nodeToDelete.leftChild! : nodeToDelete.rightChild!
-			if nodeToDelete.color == .Black {
-				if child.color == .Red {
-					child.color = .Black
+			if nodeToDelete.color == .black {
+				if child.color == .red {
+					child.color = .black
 				} else {
 					self.deleteCase1(child)
 				}
@@ -30,9 +30,9 @@ extension RedBlackTree {
 	
 	private func deleteCase2(_ node: RedBlackTreeNode<Key, Value>) {
 		let sibling = node.sibling
-		if sibling?.color == .Red {
-			node.parent?.color = .Red
-			sibling?.color = .Black
+		if sibling?.color == .red {
+			node.parent?.color = .red
+			sibling?.color = .black
 			if node.isLeftChild {
 				self.root = node.parent?.rotateLeft()
 			} else {
@@ -44,11 +44,11 @@ extension RedBlackTree {
 	
 	private func deleteCase3(_ node: RedBlackTreeNode<Key, Value>) {
 		let sibling = node.sibling
-		if (node.parent!.color == .Black &&
-			sibling?.color ?? .Black == .Black &&
-			sibling?.leftChild?.color ?? .Black == .Black &&
-			sibling?.rightChild?.color ?? .Black == .Black) {
-			sibling?.color = .Red
+		if (node.parent!.color == .black &&
+			sibling?.color ?? .black == .black &&
+			sibling?.leftChild?.color ?? .black == .black &&
+			sibling?.rightChild?.color ?? .black == .black) {
+			sibling?.color = .red
 			self.deleteCase1(node.parent!)
 		} else {
 			self.deleteCase4(node)
@@ -57,12 +57,12 @@ extension RedBlackTree {
 	
 	private func deleteCase4(_ node: RedBlackTreeNode<Key, Value>) {
 		let sibling = node.sibling
-		if (node.parent?.color == .Red &&
-			sibling?.color ?? .Black == .Black &&
-			sibling?.leftChild?.color ?? .Black == .Black &&
-			sibling?.rightChild?.color ?? .Black == .Black) {
-			sibling?.color = .Red
-			node.parent?.color = .Black
+		if (node.parent?.color == .red &&
+			sibling?.color ?? .black == .black &&
+			sibling?.leftChild?.color ?? .black == .black &&
+			sibling?.rightChild?.color ?? .black == .black) {
+			sibling?.color = .red
+			node.parent?.color = .black
 		} else {
 			self.deleteCase5(node)
 		}
@@ -71,16 +71,16 @@ extension RedBlackTree {
 	private func deleteCase5(_ node: RedBlackTreeNode<Key, Value>) {
 		let sibling = node.sibling
 		if (node.isLeftChild &&
-			sibling?.rightChild?.color ?? .Black == .Black &&
-			sibling?.leftChild?.color == .Red) {
-			sibling?.color = .Red
-			sibling?.leftChild?.color = .Black
+			sibling?.rightChild?.color ?? .black == .black &&
+			sibling?.leftChild?.color == .red) {
+			sibling?.color = .red
+			sibling?.leftChild?.color = .black
 			self.root = sibling?.rotateRight()
 		} else if (node.isRightChild &&
-			sibling?.leftChild?.color ?? .Black == .Black &&
-			sibling?.rightChild?.color == .Red) {
-			sibling?.color = .Red
-			sibling?.rightChild?.color = .Black
+			sibling?.leftChild?.color ?? .black == .black &&
+			sibling?.rightChild?.color == .red) {
+			sibling?.color = .red
+			sibling?.rightChild?.color = .black
 			self.root = sibling?.rotateLeft()
 		}
 		self.deleteCase6(node)
@@ -88,13 +88,13 @@ extension RedBlackTree {
 
 	private func deleteCase6(_ node: RedBlackTreeNode<Key, Value>) {
 		let sibling = node.sibling
-		sibling?.color = node.parent?.color ?? .Black
-		node.parent?.color = .Black
+		sibling?.color = node.parent?.color ?? .black
+		node.parent?.color = .black
 		if node.isLeftChild {
-			sibling?.rightChild?.color = .Black
+			sibling?.rightChild?.color = .black
 			self.root = node.parent?.rotateLeft()
 		} else {
-			sibling?.leftChild?.color = .Black
+			sibling?.leftChild?.color = .black
 			self.root = node.parent?.rotateRight()
 		}
 	}

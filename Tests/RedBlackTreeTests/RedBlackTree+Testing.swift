@@ -6,8 +6,8 @@
 @testable import RedBlackTree
 
 internal struct RedBlackTreeNodeInformation {
-	private let key: Int
-	private let color: RedBlackTreeNodeColor
+	fileprivate let key: Int
+	fileprivate let color: RedBlackTreeNodeColor
 	
 	internal init(_ key: Int, _ color: RedBlackTreeNodeColor) {
 		self.key = key
@@ -15,7 +15,6 @@ internal struct RedBlackTreeNodeInformation {
 	}
 }
 
-@warn_unused_result
 internal func ==(lhs: RedBlackTreeNodeInformation, rhs: RedBlackTreeNodeInformation) -> Bool {
 	return lhs.key == rhs.key && lhs.color == rhs.color
 }
@@ -30,7 +29,6 @@ internal indirect enum RedBlackTreeRepresentation {
 }
 
 extension RedBlackTreeRepresentation: Equatable {}
-@warn_unused_result
 internal func ==(lhs: RedBlackTreeRepresentation, rhs: RedBlackTreeRepresentation) -> Bool {
 	switch (lhs, rhs) {
 		case (.Null, .Null): return true

@@ -6,8 +6,8 @@
 //
 //
 
-@testable import RedBlackTree
 import XCTest
+import RedBlackTree
 
 class RedBlackTreeCollectionTests: XCTestCase {
 	func testForEach() {
@@ -29,6 +29,6 @@ class RedBlackTreeCollectionTests: XCTestCase {
 	}
 	
 	static var allTests = [
-		("testForEach", testForEach),
+		("testForEach", testForEach)
 	]
 }

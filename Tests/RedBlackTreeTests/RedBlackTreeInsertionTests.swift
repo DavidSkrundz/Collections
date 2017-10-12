@@ -1,12 +1,12 @@
 //
-//  RedBlackInsertionTreeTests.swift
+//  RedBlackTreeInsertionTests.swift
 //  Collections
 //
 
-@testable import RedBlackTree
 import XCTest
+@testable import RedBlackTree
 
-class RedBlackInsertionTreeTests: XCTestCase {
+class RedBlackTreeInsertionTests: XCTestCase {
 	private var tree: RedBlackTree<Int, Void>!
 	
 	override func setUp() {
@@ -18,7 +18,7 @@ class RedBlackInsertionTreeTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(1, .Black),
+				RedBlackTreeNodeInformation(1, .black),
 				.Null,
 				.Null
 			)
@@ -31,9 +31,9 @@ class RedBlackInsertionTreeTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(1, .Black),
+				RedBlackTreeNodeInformation(1, .black),
 				.Node(
-					RedBlackTreeNodeInformation(0, .Red),
+					RedBlackTreeNodeInformation(0, .red),
 					.Null,
 					.Null
 				),
@@ -48,10 +48,10 @@ class RedBlackInsertionTreeTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(1, .Black),
+				RedBlackTreeNodeInformation(1, .black),
 				.Null,
 				.Node(
-					RedBlackTreeNodeInformation(2, .Red),
+					RedBlackTreeNodeInformation(2, .red),
 					.Null,
 					.Null
 				)
@@ -68,22 +68,22 @@ class RedBlackInsertionTreeTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(4, .Black),
+				RedBlackTreeNodeInformation(4, .black),
 				.Node(
-					RedBlackTreeNodeInformation(2, .Black),
+					RedBlackTreeNodeInformation(2, .black),
 					.Node(
-						RedBlackTreeNodeInformation(1, .Red),
+						RedBlackTreeNodeInformation(1, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(3, .Red),
+						RedBlackTreeNodeInformation(3, .red),
 						.Null,
 						.Null
 					)
 				),
 				.Node(
-					RedBlackTreeNodeInformation(5, .Black),
+					RedBlackTreeNodeInformation(5, .black),
 					.Null,
 					.Null
 				)
@@ -100,21 +100,21 @@ class RedBlackInsertionTreeTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(2, .Black),
+				RedBlackTreeNodeInformation(2, .black),
 				.Node(
-					RedBlackTreeNodeInformation(1, .Black),
+					RedBlackTreeNodeInformation(1, .black),
 					.Null,
 					.Null
 				),
 				.Node(
-					RedBlackTreeNodeInformation(4, .Black),
+					RedBlackTreeNodeInformation(4, .black),
 					.Node(
-						RedBlackTreeNodeInformation(3, .Red),
+						RedBlackTreeNodeInformation(3, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(5, .Red),
+						RedBlackTreeNodeInformation(5, .red),
 						.Null,
 						.Null
 					)
@@ -132,22 +132,22 @@ class RedBlackInsertionTreeTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(5, .Black),
+				RedBlackTreeNodeInformation(5, .black),
 				.Node(
-					RedBlackTreeNodeInformation(3, .Black),
+					RedBlackTreeNodeInformation(3, .black),
 					.Node(
-						RedBlackTreeNodeInformation(1, .Red),
+						RedBlackTreeNodeInformation(1, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(4, .Red),
+						RedBlackTreeNodeInformation(4, .red),
 						.Null,
 						.Null
 					)
 				),
 				.Node(
-					RedBlackTreeNodeInformation(10, .Black),
+					RedBlackTreeNodeInformation(10, .black),
 					.Null,
 					.Null
 				)
@@ -164,21 +164,21 @@ class RedBlackInsertionTreeTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(5, .Black),
+				RedBlackTreeNodeInformation(5, .black),
 				.Node(
-					RedBlackTreeNodeInformation(1, .Black),
+					RedBlackTreeNodeInformation(1, .black),
 					.Null,
 					.Null
 				),
 				.Node(
-					RedBlackTreeNodeInformation(7, .Black),
+					RedBlackTreeNodeInformation(7, .black),
 					.Node(
-						RedBlackTreeNodeInformation(6, .Red),
+						RedBlackTreeNodeInformation(6, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(10, .Red),
+						RedBlackTreeNodeInformation(10, .red),
 						.Null,
 						.Null
 					)
@@ -194,6 +194,6 @@ class RedBlackInsertionTreeTests: XCTestCase {
 		("testInsertionToTheLeftOfRootLeftLeaning", testInsertionToTheLeftOfRootLeftLeaning),
 		("testInsertionToTheRightOfRootRightLeaning", testInsertionToTheRightOfRootRightLeaning),
 		("testInsertionToTheLeftOfRootRightLeaning", testInsertionToTheLeftOfRootRightLeaning),
-		("testInsertionToTheRightOfRootLeftLeaning", testInsertionToTheRightOfRootLeftLeaning),
+		("testInsertionToTheRightOfRootLeftLeaning", testInsertionToTheRightOfRootLeftLeaning)
 	]
 }

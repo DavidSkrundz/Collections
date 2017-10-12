@@ -3,8 +3,8 @@
 //  Collections
 //
 
-@testable import RedBlackTree
 import XCTest
+@testable import RedBlackTree
 
 class RedBlackTreeNodeTests: XCTestCase {
 	func testGrandparent() {
@@ -49,6 +49,6 @@ class RedBlackTreeNodeTests: XCTestCase {
 	static var allTests = [
 		("testGrandparent", testGrandparent),
 		("testUncle", testUncle),
-		("testSibling", testSibling),
+		("testSibling", testSibling)
 	]
 }

@@ -3,8 +3,8 @@
 //  Collections
 //
 
-@testable import RedBlackTree
 import XCTest
+@testable import RedBlackTree
 
 class RedBlackTreeDeletionTests: XCTestCase {
 	private var tree: RedBlackTree<Int, Void>!
@@ -25,25 +25,25 @@ class RedBlackTreeDeletionTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(3, .Black),
+				RedBlackTreeNodeInformation(3, .black),
 				.Node(
-					RedBlackTreeNodeInformation(2, .Black),
+					RedBlackTreeNodeInformation(2, .black),
 					.Node(
-						RedBlackTreeNodeInformation(1, .Red),
+						RedBlackTreeNodeInformation(1, .red),
 						.Null,
 						.Null
 					),
 					.Null
 				),
 				.Node(
-					RedBlackTreeNodeInformation(6, .Black),
+					RedBlackTreeNodeInformation(6, .black),
 					.Node(
-						RedBlackTreeNodeInformation(5, .Red),
+						RedBlackTreeNodeInformation(5, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(7, .Red),
+						RedBlackTreeNodeInformation(7, .red),
 						.Null,
 						.Null
 					)
@@ -57,25 +57,25 @@ class RedBlackTreeDeletionTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(4, .Black),
+				RedBlackTreeNodeInformation(4, .black),
 				.Node(
-					RedBlackTreeNodeInformation(2, .Black),
+					RedBlackTreeNodeInformation(2, .black),
 					.Node(
-						RedBlackTreeNodeInformation(1, .Red),
+						RedBlackTreeNodeInformation(1, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(3, .Red),
+						RedBlackTreeNodeInformation(3, .red),
 						.Null,
 						.Null
 					)
 				),
 				.Node(
-					RedBlackTreeNodeInformation(6, .Black),
+					RedBlackTreeNodeInformation(6, .black),
 					.Null,
 					.Node(
-						RedBlackTreeNodeInformation(7, .Red),
+						RedBlackTreeNodeInformation(7, .red),
 						.Null,
 						.Null
 					)
@@ -89,24 +89,24 @@ class RedBlackTreeDeletionTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(4, .Black),
+				RedBlackTreeNodeInformation(4, .black),
 				.Node(
-					RedBlackTreeNodeInformation(2, .Black),
+					RedBlackTreeNodeInformation(2, .black),
 					.Node(
-						RedBlackTreeNodeInformation(1, .Red),
+						RedBlackTreeNodeInformation(1, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(3, .Red),
+						RedBlackTreeNodeInformation(3, .red),
 						.Null,
 						.Null
 					)
 				),
 				.Node(
-					RedBlackTreeNodeInformation(6, .Black),
+					RedBlackTreeNodeInformation(6, .black),
 					.Node(
-						RedBlackTreeNodeInformation(5, .Red),
+						RedBlackTreeNodeInformation(5, .red),
 						.Null,
 						.Null
 					),
@@ -121,25 +121,25 @@ class RedBlackTreeDeletionTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(4, .Black),
+				RedBlackTreeNodeInformation(4, .black),
 				.Node(
-					RedBlackTreeNodeInformation(1, .Black),
+					RedBlackTreeNodeInformation(1, .black),
 					.Null,
 					.Node(
-						RedBlackTreeNodeInformation(3, .Red),
+						RedBlackTreeNodeInformation(3, .red),
 						.Null,
 						.Null
 					)
 				),
 				.Node(
-					RedBlackTreeNodeInformation(6, .Black),
+					RedBlackTreeNodeInformation(6, .black),
 					.Node(
-						RedBlackTreeNodeInformation(5, .Red),
+						RedBlackTreeNodeInformation(5, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(7, .Red),
+						RedBlackTreeNodeInformation(7, .red),
 						.Null,
 						.Null
 					)
@@ -153,25 +153,25 @@ class RedBlackTreeDeletionTests: XCTestCase {
 		
 		XCTAssertEqual(tree.root!.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(4, .Black),
+				RedBlackTreeNodeInformation(4, .black),
 				.Node(
-					RedBlackTreeNodeInformation(2, .Black),
+					RedBlackTreeNodeInformation(2, .black),
 					.Node(
-						RedBlackTreeNodeInformation(1, .Red),
+						RedBlackTreeNodeInformation(1, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(3, .Red),
+						RedBlackTreeNodeInformation(3, .red),
 						.Null,
 						.Null
 					)
 				),
 				.Node(
-					RedBlackTreeNodeInformation(5, .Black),
+					RedBlackTreeNodeInformation(5, .black),
 					.Null,
 					.Node(
-						RedBlackTreeNodeInformation(7, .Red),
+						RedBlackTreeNodeInformation(7, .red),
 						.Null,
 						.Null
 					)
@@ -185,6 +185,6 @@ class RedBlackTreeDeletionTests: XCTestCase {
 		("testDeleteLeftLeaf", testDeleteLeftLeaf),
 		("testDeleteRightLeaf", testDeleteRightLeaf),
 		("testDeleteLeftMiddleNode", testDeleteLeftMiddleNode),
-		("testDeleteRightMiddleNode", testDeleteRightMiddleNode),
+		("testDeleteRightMiddleNode", testDeleteRightMiddleNode)
 	]
 }

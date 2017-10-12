@@ -5,7 +5,7 @@
 
 /// A node in a `RedBlackTree`
 internal class RedBlackTreeNode<Key: Comparable, Value> {
-	internal var color = RedBlackTreeNodeColor.Red
+	internal var color = RedBlackTreeNodeColor.red
 	
 	private(set) internal var key: Key
 	private(set) internal var value: Value

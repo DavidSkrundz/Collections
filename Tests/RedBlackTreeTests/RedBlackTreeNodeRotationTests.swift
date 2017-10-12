@@ -3,8 +3,8 @@
 //  Collections
 //
 
-@testable import RedBlackTree
 import XCTest
+@testable import RedBlackTree
 
 class RedBlackTreeNodeRotationTests: XCTestCase {
 	private var rootNode: RedBlackTreeNode<Int, Void>!
@@ -39,30 +39,30 @@ class RedBlackTreeNodeRotationTests: XCTestCase {
 		
 		XCTAssertEqual(newRoot.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(3, .Red),
+				RedBlackTreeNodeInformation(3, .red),
 				.Node(
-					RedBlackTreeNodeInformation(1, .Red),
+					RedBlackTreeNodeInformation(1, .red),
 					.Node(
-						RedBlackTreeNodeInformation(2, .Red),
+						RedBlackTreeNodeInformation(2, .red),
 						.Node(
-							RedBlackTreeNodeInformation(4, .Red),
+							RedBlackTreeNodeInformation(4, .red),
 							.Null,
 							.Null
 						),
 						.Node(
-							RedBlackTreeNodeInformation(5, .Red),
+							RedBlackTreeNodeInformation(5, .red),
 							.Null,
 							.Null
 						)
 					),
 					.Node(
-						RedBlackTreeNodeInformation(6, .Red),
+						RedBlackTreeNodeInformation(6, .red),
 						.Null,
 						.Null
 					)
 				),
 				.Node(
-					RedBlackTreeNodeInformation(7, .Red),
+					RedBlackTreeNodeInformation(7, .red),
 					.Null,
 					.Null
 				)
@@ -75,28 +75,28 @@ class RedBlackTreeNodeRotationTests: XCTestCase {
 		
 		XCTAssertEqual(newRoot.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(2, .Red),
+				RedBlackTreeNodeInformation(2, .red),
 				.Node(
-					RedBlackTreeNodeInformation(4, .Red),
+					RedBlackTreeNodeInformation(4, .red),
 					.Null,
 					.Null
 				),
 				.Node(
-					RedBlackTreeNodeInformation(1, .Red),
+					RedBlackTreeNodeInformation(1, .red),
 					.Node(
-						RedBlackTreeNodeInformation(5, .Red),
+						RedBlackTreeNodeInformation(5, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(3, .Red),
+						RedBlackTreeNodeInformation(3, .red),
 						.Node(
-							RedBlackTreeNodeInformation(6, .Red),
+							RedBlackTreeNodeInformation(6, .red),
 							.Null,
 							.Null
 						),
 						.Node(
-							RedBlackTreeNodeInformation(7, .Red),
+							RedBlackTreeNodeInformation(7, .red),
 							.Null,
 							.Null
 						)
@@ -111,26 +111,26 @@ class RedBlackTreeNodeRotationTests: XCTestCase {
 		
 		XCTAssertEqual(newRoot.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(1, .Red),
+				RedBlackTreeNodeInformation(1, .red),
 				.Node(
-					RedBlackTreeNodeInformation(2, .Red),
+					RedBlackTreeNodeInformation(2, .red),
 					.Node(
-						RedBlackTreeNodeInformation(4, .Red),
+						RedBlackTreeNodeInformation(4, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(5, .Red),
+						RedBlackTreeNodeInformation(5, .red),
 						.Null,
 						.Null
 					)
 				),
 				.Node(
-					RedBlackTreeNodeInformation(7, .Red),
+					RedBlackTreeNodeInformation(7, .red),
 					.Node(
-						RedBlackTreeNodeInformation(3, .Red),
+						RedBlackTreeNodeInformation(3, .red),
 						.Node(
-							RedBlackTreeNodeInformation(6, .Red),
+							RedBlackTreeNodeInformation(6, .red),
 							.Null,
 							.Null
 						),
@@ -147,13 +147,13 @@ class RedBlackTreeNodeRotationTests: XCTestCase {
 		
 		XCTAssertEqual(newRoot.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(1, .Red),
+				RedBlackTreeNodeInformation(1, .red),
 				.Node(
-					RedBlackTreeNodeInformation(5, .Red),
+					RedBlackTreeNodeInformation(5, .red),
 					.Node(
-						RedBlackTreeNodeInformation(2, .Red),
+						RedBlackTreeNodeInformation(2, .red),
 						.Node(
-							RedBlackTreeNodeInformation(4, .Red),
+							RedBlackTreeNodeInformation(4, .red),
 							.Null,
 							.Null
 						),
@@ -162,14 +162,14 @@ class RedBlackTreeNodeRotationTests: XCTestCase {
 					.Null
 				),
 				.Node(
-					RedBlackTreeNodeInformation(3, .Red),
+					RedBlackTreeNodeInformation(3, .red),
 					.Node(
-						RedBlackTreeNodeInformation(6, .Red),
+						RedBlackTreeNodeInformation(6, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(7, .Red),
+						RedBlackTreeNodeInformation(7, .red),
 						.Null,
 						.Null
 					)
@@ -183,28 +183,28 @@ class RedBlackTreeNodeRotationTests: XCTestCase {
 		
 		XCTAssertEqual(newRoot.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(1, .Red),
+				RedBlackTreeNodeInformation(1, .red),
 				.Node(
-					RedBlackTreeNodeInformation(2, .Red),
+					RedBlackTreeNodeInformation(2, .red),
 					.Node(
-						RedBlackTreeNodeInformation(4, .Red),
+						RedBlackTreeNodeInformation(4, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(5, .Red),
+						RedBlackTreeNodeInformation(5, .red),
 						.Null,
 						.Null
 					)
 				),
 				.Node(
-					RedBlackTreeNodeInformation(6, .Red),
+					RedBlackTreeNodeInformation(6, .red),
 					.Null,
 					.Node(
-						RedBlackTreeNodeInformation(3, .Red),
+						RedBlackTreeNodeInformation(3, .red),
 						.Null,
 						.Node(
-							RedBlackTreeNodeInformation(7, .Red),
+							RedBlackTreeNodeInformation(7, .red),
 							.Null,
 							.Null
 						)
@@ -219,29 +219,29 @@ class RedBlackTreeNodeRotationTests: XCTestCase {
 		
 		XCTAssertEqual(newRoot.representation,
 			RedBlackTreeRepresentation.Node(
-				RedBlackTreeNodeInformation(1, .Red),
+				RedBlackTreeNodeInformation(1, .red),
 				.Node(
-					RedBlackTreeNodeInformation(4, .Red),
+					RedBlackTreeNodeInformation(4, .red),
 					.Null,
 					.Node(
-						RedBlackTreeNodeInformation(2, .Red),
+						RedBlackTreeNodeInformation(2, .red),
 						.Null,
 						.Node(
-							RedBlackTreeNodeInformation(5, .Red),
+							RedBlackTreeNodeInformation(5, .red),
 							.Null,
 							.Null
 						)
 					)
 				),
 				.Node(
-					RedBlackTreeNodeInformation(3, .Red),
+					RedBlackTreeNodeInformation(3, .red),
 					.Node(
-						RedBlackTreeNodeInformation(6, .Red),
+						RedBlackTreeNodeInformation(6, .red),
 						.Null,
 						.Null
 					),
 					.Node(
-						RedBlackTreeNodeInformation(7, .Red),
+						RedBlackTreeNodeInformation(7, .red),
 						.Null,
 						.Null
 					)
@@ -256,6 +256,6 @@ class RedBlackTreeNodeRotationTests: XCTestCase {
 		("testNonRootLeftRotationOnRightSide", testNonRootLeftRotationOnRightSide),
 		("testNonRootLeftRotationOnLeftSide", testNonRootLeftRotationOnLeftSide),
 		("testNonRootRightRotationOnRightSide", testNonRootRightRotationOnRightSide),
-		("testNonRootRightRotationOnLeftSide", testNonRootRightRotationOnLeftSide),
+		("testNonRootRightRotationOnLeftSide", testNonRootRightRotationOnLeftSide)
 	]
 }

@@ -3,11 +3,11 @@
 //  Collections
 //
 
-@testable import RedBlackTree
 import XCTest
+@testable import RedBlackTreeTests
 
 XCTMain([
-	testCase(RedBlackInsertionTreeTests.allTests),
+	testCase(RedBlackTreeInsertionTests.allTests),
 	testCase(RedBlackTreeDeletionTests.allTests),
 	testCase(RedBlackTreeNodeTests.allTests),
 	testCase(RedBlackTreeNodeRotationTests.allTests),

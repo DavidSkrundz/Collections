@@ -21,14 +21,14 @@ extension RedBlackTree {
 	
 	private func insertCase1(_ node: RedBlackTreeNode<Key, Value>) {
 		if node.parent == nil {
-			node.color = .Black
+			node.color = .black
 		} else {
 			self.insertCase2(node)
 		}
 	}
 	
 	private func insertCase2(_ node: RedBlackTreeNode<Key, Value>) {
-		if node.parent!.color == .Black {
+		if node.parent!.color == .black {
 			return
 		} else {
 			self.insertCase3(node)
@@ -36,10 +36,10 @@ extension RedBlackTree {
 	}
 	
 	private func insertCase3(_ node: RedBlackTreeNode<Key, Value>) {
-		if node.uncle?.color == .Red {
-			node.parent?.color = .Black
-			node.uncle?.color = .Black
-			node.grandparent?.color = .Red
+		if node.uncle?.color == .red {
+			node.parent?.color = .black
+			node.uncle?.color = .black
+			node.grandparent?.color = .red
 			self.insertCase1(node.grandparent!) // Able to force since finding an uncle means the grandparent exists
 			
 		} else {
@@ -60,8 +60,8 @@ extension RedBlackTree {
 	}
 	
 	private func insertCase5(_ node: RedBlackTreeNode<Key, Value>) {
-		node.parent?.color = .Black
-		node.grandparent?.color = .Red
+		node.parent?.color = .black
+		node.grandparent?.color = .red
 		if node.isLeftChild {
 			self.root = node.grandparent?.rotateRight()
 		} else {

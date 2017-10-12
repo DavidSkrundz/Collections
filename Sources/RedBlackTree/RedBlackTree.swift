@@ -24,7 +24,7 @@ extension RedBlackTree {
 		self.root = nil
 	}
 	
-	public func forEach(_ closure: @noescape (Value) -> ()) {
+	public func forEach(_ closure: (Value) -> Void) {
 		guard self.root != nil else { return }
 		
 		var node: RedBlackTreeNode! = min(self.root!)
