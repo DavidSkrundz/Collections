@@ -4,12 +4,8 @@
 //
 
 import XCTest
-@testable import RedBlackTreeTests
+@testable import GeneratorTests
 
 XCTMain([
-	testCase(RedBlackTreeInsertionTests.allTests),
-	testCase(RedBlackTreeDeletionTests.allTests),
-	testCase(RedBlackTreeNodeTests.allTests),
-	testCase(RedBlackTreeNodeRotationTests.allTests),
-	testCase(RedBlackTreeCollectionTests.allTests),
+	testCase(GeneratorTests.allTests),
 ])

@@ -10,20 +10,20 @@ let package = Package(
 	name: "Collections",
 	products: [
 		.library(
-			name: "RedBlackTree",
+			name: "Generator",
 			type: .static,
-			targets: ["RedBlackTree"]),
+			targets: ["Generator"]),
 		.library(
-			name: "RedBlackTree",
+			name: "Generator",
 			type: .dynamic,
-			targets: ["RedBlackTree"])
+			targets: ["Generator"])
 	],
 	targets: [
 		.target(
-			name: "RedBlackTree",
+			name: "Generator",
 			dependencies: []),
 		.testTarget(
-			name: "RedBlackTreeTests",
-			dependencies: ["RedBlackTree"])
+			name: "GeneratorTests",
+			dependencies: ["Generator"])
 	]
 )
