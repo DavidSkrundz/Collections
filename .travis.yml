@@ -1,6 +1,6 @@
 os:
-- osx
-- linux
+  - osx
+  - linux
 
 language: generic
 
@@ -10,5 +10,5 @@ dist: trusty
 osx_image: xcode9
 
 script:
-- eval "$(curl -sL https://swift.skrundz.ca/ci)"
-- eval "$(curl -sL https://swift.skrundz.ca/codecov)"
+  - eval "$(curl -sL https://swift.skrundz.ca/ci)"
+  - eval "$(curl -sL https://swift.skrundz.ca/codecov)"
