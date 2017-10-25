@@ -16,7 +16,15 @@ let package = Package(
 		.library(
 			name: "Generator",
 			type: .dynamic,
-			targets: ["Generator"])
+			targets: ["Generator"]),
+		.library(
+			name: "Pair",
+			type: .static,
+			targets: ["Pair"]),
+		.library(
+			name: "Pair",
+			type: .dynamic,
+			targets: ["Pair"])
 	],
 	targets: [
 		.target(
@@ -24,6 +32,12 @@ let package = Package(
 			dependencies: []),
 		.testTarget(
 			name: "GeneratorTests",
-			dependencies: ["Generator"])
+			dependencies: ["Generator"]),
+		.target(
+			name: "Pair",
+			dependencies: []),
+		.testTarget(
+			name: "PairTests",
+			dependencies: ["Pair"])
 	]
 )

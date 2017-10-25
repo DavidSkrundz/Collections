@@ -1,6 +1,6 @@
 //
 //  GeneratorTests.swift
-//  Collections
+//  Generator
 //
 
 import XCTest

@@ -6,4 +6,5 @@ A Swift implementation of various Collections and Data Structures
 Collections
 -----------
 
-- `RedBlackTree`
+- `Generator`
+- `Pair`
