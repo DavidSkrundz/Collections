@@ -3,4 +3,4 @@
 //  Generator
 //
 
-extension Gen: Sequence {}
+extension Generator: Sequence {}

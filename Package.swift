@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version:4.1
 //
 //  Package.swift
 //  Collections
@@ -11,18 +11,24 @@ let package = Package(
 	products: [
 		.library(
 			name: "Generator",
+			targets: ["Generator"]),
+		.library(
+			name: "sGenerator",
 			type: .static,
 			targets: ["Generator"]),
 		.library(
-			name: "Generator",
+			name: "dGenerator",
 			type: .dynamic,
 			targets: ["Generator"]),
 		.library(
 			name: "Pair",
+			targets: ["Pair"]),
+		.library(
+			name: "sPair",
 			type: .static,
 			targets: ["Pair"]),
 		.library(
-			name: "Pair",
+			name: "dPair",
 			type: .dynamic,
 			targets: ["Pair"])
 	],

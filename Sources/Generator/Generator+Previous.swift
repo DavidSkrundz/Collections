@@ -3,7 +3,7 @@
 //  Generator
 //
 
-extension Gen {
+extension Generator {
 	/// Get the previous element and reverse the index
 	///
 	/// - Returns: The previous element in the `Sequence`
@@ -26,12 +26,12 @@ extension Gen {
 	///
 	/// - Returns: A `SubSequence` of the previous `amount` of elements or less
 	///            if less exist
-	public mutating func previous(_ amount: IndexDistance) -> [Element] {
+	public mutating func previous(_ amount: Int) -> [Element] {
 		let start = self.collection.startIndex
 		let endIndex = self.currentIndex
 		let startIndex = self.collection.index(self.currentIndex,
-		                                       offsetBy: -amount,
-		                                       limitedBy: start) ?? start
+											   offsetBy: -amount,
+											   limitedBy: start) ?? start
 		self.currentIndex = startIndex
 		return self.collection[self.currentIndex..<endIndex].reversed()
 	}
@@ -41,11 +41,11 @@ extension Gen {
 	///
 	/// - Returns: A `SubSequence` of the previous `amount` of elements or less
 	///            if less exist
-	public func peekPrevious(_ amount: IndexDistance) -> [Element] {
+	public func peekPrevious(_ amount: Int) -> [Element] {
 		let start = self.collection.startIndex
 		let startIndex = self.collection.index(self.currentIndex,
-		                                       offsetBy: -amount,
-		                                       limitedBy: start) ?? start
+											   offsetBy: -amount,
+											   limitedBy: start) ?? start
 		let endIndex = self.currentIndex
 		return self.collection[startIndex..<endIndex].reversed()
 	}

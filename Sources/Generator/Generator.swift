@@ -3,16 +3,12 @@
 //  Generator
 //
 
-/// A `Gen` behaves like an `Iterator`, but allows for backtracking and
+/// A `Generator` behaves like an `Iterator`, but allows for backtracking and
 /// skipping elements
 ///
-/// - Note: Will be renamed to `Generator` once Swift decides that it can
-///         finally remove the `Iterator` typealias
-///
 /// - Author: David Skrundz
-public struct Gen<Container: Collection> {
+public struct Generator<Container: Collection> {
 	public typealias Index = Container.Index
-	public typealias IndexDistance = Container.IndexDistance
 	
 	internal let collection: Container
 	internal var currentIndex: Index
@@ -39,14 +35,14 @@ public struct Gen<Container: Collection> {
 		self.currentIndex = self.collection.startIndex
 	}
 	
-	/// Get the remaining items as an `Array`
+	/// Get the remaining items
 	///
 	/// - Note: Does not advance the index
 	///
-	/// - Returns: An `Array` of the remaining items
-	public func remainingItems() -> [Element] {
+	/// - Returns: A `Container.SubSequence` of remaining items
+	public func remaining() -> Container.SubSequence {
 		let startIndex = self.currentIndex
 		let endIndex = self.collection.endIndex
-		return Array(self.collection[startIndex..<endIndex])
+		return self.collection[startIndex..<endIndex]
 	}
 }

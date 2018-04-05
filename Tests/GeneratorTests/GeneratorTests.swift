@@ -125,7 +125,7 @@ class GeneratorTests: XCTestCase {
 		var generator = testCollection.generator()
 		
 		generator.advanceBy(6)
-		XCTAssertEqual(generator.remainingItems(), ["7", "8", "9"])
+		XCTAssertEqual(Array(generator.remaining()), ["7", "8", "9"])
 		XCTAssertEqual(generator.next(), "7")
 	}
 	

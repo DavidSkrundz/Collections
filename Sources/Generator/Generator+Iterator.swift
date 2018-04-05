@@ -3,7 +3,7 @@
 //  Generator
 //
 
-extension Gen: IteratorProtocol {
+extension Generator: IteratorProtocol {
 	public typealias Element = Container.Element
 	
 	/// Get the next element and advance the index

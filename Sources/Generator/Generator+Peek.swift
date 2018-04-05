@@ -3,7 +3,7 @@
 //  Generator
 //
 
-extension Gen {
+extension Generator {
 	/// Get the next element without advancing the index
 	///
 	/// - Returns: The next element in the `Sequence`
@@ -16,12 +16,12 @@ extension Gen {
 	///
 	/// - Returns: A `SubSequence` of the next `amount` of elements or less if
 	///            less exist
-	public mutating func next(_ amount: IndexDistance) -> [Element] {
+	public mutating func next(_ amount: Int) -> [Element] {
 		let startIndex = self.currentIndex
 		let end = self.collection.endIndex
 		let endIndex = self.collection.index(self.currentIndex,
-		                                     offsetBy: amount,
-		                                     limitedBy: end) ?? end
+											 offsetBy: amount,
+											 limitedBy: end) ?? end
 		self.currentIndex = endIndex
 		return Array(self.collection[startIndex..<endIndex])
 	}
@@ -31,12 +31,12 @@ extension Gen {
 	///
 	/// - Returns: A `SubSequence` of the next `amount` of elements or less if
 	///            less exist
-	public func peek(_ amount: IndexDistance) -> [Element] {
+	public func peek(_ amount: Int) -> [Element] {
 		let startIndex = self.currentIndex
 		let end = self.collection.endIndex
 		let endIndex = self.collection.index(self.currentIndex,
-		                                     offsetBy: amount,
-		                                     limitedBy: end) ?? end
+											 offsetBy: amount,
+											 limitedBy: end) ?? end
 		return Array(self.collection[startIndex..<endIndex])
 	}
 }

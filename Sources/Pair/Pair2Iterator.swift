@@ -3,7 +3,8 @@
 //  Pair
 //
 
-public struct Pair2Iterator<Iterator1, Iterator2> : IteratorProtocol where Iterator1 : IteratorProtocol, Iterator2 : IteratorProtocol {
+public struct Pair2Iterator<Iterator1, Iterator2>: IteratorProtocol
+		where Iterator1: IteratorProtocol, Iterator2: IteratorProtocol {
 	public typealias Element = (Iterator1.Element, Iterator2.Element)
 	
 	private var lastIterator1: Iterator1.Element?
