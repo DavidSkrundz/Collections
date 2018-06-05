@@ -21,6 +21,17 @@ let package = Package(
 			type: .dynamic,
 			targets: ["Generator"]),
 		.library(
+			name: "Graph",
+			targets: ["Graph"]),
+		.library(
+			name: "sGraph",
+			type: .static,
+			targets: ["Graph"]),
+		.library(
+			name: "dGraph",
+			type: .dynamic,
+			targets: ["Graph"]),
+		.library(
 			name: "Pair",
 			targets: ["Pair"]),
 		.library(
@@ -39,6 +50,12 @@ let package = Package(
 		.testTarget(
 			name: "GeneratorTests",
 			dependencies: ["Generator"]),
+		.target(
+			name: "Graph",
+			dependencies: []),
+		.testTarget(
+			name: "GraphTests",
+			dependencies: ["Graph"]),
 		.target(
 			name: "Pair",
 			dependencies: []),
