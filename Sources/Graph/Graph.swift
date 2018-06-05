@@ -51,7 +51,7 @@ public class Graph<T, U> {
 					reachable.append(v)
 					let toQueue = self.edges
 						.filter { $0.from === v }
-						.map { ($0.to!, d+1, $0.data) }
+						.map { ($0.to, d+1, $0.data) }
 					queue.append(contentsOf: toQueue)
 				}
 			}
