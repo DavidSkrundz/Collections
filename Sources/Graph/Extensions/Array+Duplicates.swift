@@ -3,19 +3,6 @@
 //  Graph
 //
 
-extension Array where Element: Equatable {
-	func filterDuplicates() -> [Element] {
-		var result = [Element]()
-		result.reserveCapacity(self.count)
-		for value in self {
-			if !result.contains(value) {
-				result.append(value)
-			}
-		}
-		return result
-	}
-}
-
 extension Array {
 	func filterDuplicates(_ include: (Element, Element) -> Bool) -> [Element] {
 		var result = [Element]()
