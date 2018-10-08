@@ -6,7 +6,7 @@
 import XCTest
 import Graph
 
-class GraphTests: XCTestCase {
+final class GraphTests: XCTestCase {
 	func testNeighbours() {
 		let g = Graph<Int,Void>()
 		
@@ -88,11 +88,13 @@ class GraphTests: XCTestCase {
 		
 		XCTAssertEqual(reach, [v1,v2,v3])
 	}
-	
+}
+
+extension GraphTests: TestCase {
 	static var allTests = [
 		("testNeighbours", testNeighbours),
 		("testReachable", testReachable),
-		("testReachableWhere", testReachableWhere)
+		("testReachableWhere", testReachableWhere),
 	]
 }
 

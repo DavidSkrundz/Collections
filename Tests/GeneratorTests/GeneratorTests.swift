@@ -6,7 +6,7 @@
 import XCTest
 import Generator
 
-class GeneratorTests: XCTestCase {
+final class GeneratorTests: XCTestCase {
 	func testNext() {
 		let testCollection = ["1", "2"]
 		var generator = testCollection.generator()
@@ -138,7 +138,9 @@ class GeneratorTests: XCTestCase {
 		XCTAssertEqual(generator.next(), "8")
 		XCTAssertEqual(generator.next(), "9")
 	}
-	
+}
+
+extension GeneratorTests: TestCase {
 	static var allTests = [
 		("testNext", testNext),
 		("testPeek", testPeek),
@@ -152,6 +154,6 @@ class GeneratorTests: XCTestCase {
 		("testReverseBy", testReverseBy),
 		("testForLoop", testForLoop),
 		("testRemainingItems", testRemainingItems),
-		("testStringWhitespaceSkip", testStringWhitespaceSkip)
+		("testStringWhitespaceSkip", testStringWhitespaceSkip),
 	]
 }

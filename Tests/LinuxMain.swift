@@ -9,9 +9,9 @@ import XCTest
 @testable import PairTests
 
 XCTMain([
-	testCase(GeneratorTests.allTests),
+	testCase(GeneratorTests.allTests.shuffled()),
 	
-	testCase(GraphTests.allTests),
+	testCase(GraphTests.allTests.shuffled()),
 	
-	testCase(PairTests.allTests),
+	testCase(PairTests.allTests.shuffled()),
 ])

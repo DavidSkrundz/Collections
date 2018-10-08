@@ -6,7 +6,7 @@
 import XCTest
 import Pair
 
-class PairTests: XCTestCase {
+final class PairTests: XCTestCase {
 	func testBothEmptyPair() {
 		let a = [Int]()
 		let b = [Int]()
@@ -32,11 +32,13 @@ class PairTests: XCTestCase {
 		]
 		AssertEqual(c.map{$0}, pairs)
 	}
-	
+}
+
+extension PairTests: TestCase {
 	static var allTests = [
 		("testBothEmptyPair", testBothEmptyPair),
 		("testOneEmptyPair", testOneEmptyPair),
-		("testPair", testPair)
+		("testPair", testPair),
 	]
 }
 
