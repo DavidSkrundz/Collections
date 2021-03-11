@@ -90,14 +90,6 @@ final class GraphTests: XCTestCase {
 	}
 }
 
-extension GraphTests: TestCase {
-	static var allTests = [
-		("testNeighbours", testNeighbours),
-		("testReachable", testReachable),
-		("testReachableWhere", testReachableWhere),
-	]
-}
-
 extension Vertex: Equatable where T: Equatable {}
 
 public func == <T>(lhs: Vertex<T>, rhs: Vertex<T>) -> Bool where T: Equatable {

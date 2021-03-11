@@ -3,15 +3,9 @@
 //  Collections
 //
 
-import XCTest
-@testable import GeneratorTests
-@testable import GraphTests
-@testable import PairTests
+#if os(Linux)
+import SwiftGlibc.C.stdlib
+#endif
 
-XCTMain([
-	testCase(GeneratorTests.allTests.shuffled()),
-	
-	testCase(GraphTests.allTests.shuffled()),
-	
-	testCase(PairTests.allTests.shuffled()),
-])
+print("Run the tests with `swift test --enable-test-discovery`.")
+exit(1)

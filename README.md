@@ -1,6 +1,6 @@
 # Collections
 
-[![](https://img.shields.io/badge/Swift-4.2-orange.svg)][1]
+[![](https://img.shields.io/badge/Swift-5.0--5.3-orange.svg)][1]
 [![](https://img.shields.io/badge/os-macOS%20|%20Linux-lightgray.svg)][1]
 [![](https://travis-ci.com/DavidSkrundz/Collections.svg?branch=master)][2]
 [![](https://codebeat.co/badges/d53737b4-70d6-440e-b28d-b54d2ceb5e50)][3]
@@ -16,14 +16,24 @@ Various Collections and Data Structures
 ## Importing
 
 ```Swift
-.package(url: "https://github.com/DavidSkrundz/Collections.git", .upToNextMinor(from: "1.2.0"))
+import Generator
+import Graph
+import Pair
 ```
 
-Import one of the following:
-
-- Generator
-- Graph
-- Pair
+```Swift
+dependencies: [
+	.package(url: "https://github.com/DavidSkrundz/Collections.git",
+	         from: "2.0.0")
+],
+targets: [
+	.target(
+		name: "",
+		dependencies: [
+			"Generator", "Graph", "Pair"
+		]),
+]
+```
 
 ## `Generator`
 

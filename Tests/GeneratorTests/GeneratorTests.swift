@@ -139,21 +139,3 @@ final class GeneratorTests: XCTestCase {
 		XCTAssertEqual(generator.next(), "9")
 	}
 }
-
-extension GeneratorTests: TestCase {
-	static var allTests = [
-		("testNext", testNext),
-		("testPeek", testPeek),
-		("testPrevious", testPrevious),
-		("testPeekPrevious", testPeekPrevious),
-		("testNextAmount", testNextAmount),
-		("testPeekAmount", testPeekAmount),
-		("testPreviousAmount", testPreviousAmount),
-		("testPeekPreviousAmount", testPeekPreviousAmount),
-		("testAdvanceBy", testAdvanceBy),
-		("testReverseBy", testReverseBy),
-		("testForLoop", testForLoop),
-		("testRemainingItems", testRemainingItems),
-		("testStringWhitespaceSkip", testStringWhitespaceSkip),
-	]
-}
